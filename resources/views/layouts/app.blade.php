@@ -5,20 +5,21 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-	<meta name="author" content="Truong Minh Hieu" />
+	<meta name="author" content="Tong Thien Viet Anh" />
 	<meta name="csrf-token" content="{{ csrf_token() }}" />
 	<title>{{ config('app.name', 'Ask-Programer') }}</title>
 	<link href="{{ URL::asset('css/app.css') }}" type="text/css" rel="stylesheet" />
 	<link href="{{ URL::asset('css/dataTables.bootstrap4.min.css') }}" type="text/css" rel="stylesheet" />
 	<link href="{{ URL::asset('css/font-awesome.min.css') }}" type="text/css" rel="stylesheet" /> @yield('css')
 	<link href="{{ URL::asset('css/custom.css') }}" type="text/css" rel="stylesheet" />
+	<link href="{{ URL::asset('images/icons/favicon.png') }}" rel="shortcut icon">
 </head>
 
 <body>
 	<div class="container">
-		<nav class="navbar navbar-expand-lg navbar-light" style="background:#00bfff;">
+		<nav class="navbar navbar-expand-lg navbar-dark" style="background:#000000;">
 			<a class="navbar-brand" href="{{ url('/home') }}">
-				<img src="{{ URL::asset('images/logo.png') }}" width="100" height="30" alt="" />
+				<img src="{{ URL::asset('images/logo.png') }}" width="130" height="40" alt="" />
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
 			    aria-expanded="false" aria-label="Điều hướng">
