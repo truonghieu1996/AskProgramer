@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<meta name="author" content="Tong Thien Viet Anh" />
 	<meta name="csrf-token" content="<?php echo e(csrf_token()); ?>" />
-	<title><?php echo e(config('app.name', 'Ask-Programer')); ?></title>
+	<title>Ask-Programer</title>
 	<link href="<?php echo e(URL::asset('css/app.css')); ?>" type="text/css" rel="stylesheet" />
 	<link href="<?php echo e(URL::asset('css/dataTables.bootstrap4.min.css')); ?>" type="text/css" rel="stylesheet" />
 	<link href="<?php echo e(URL::asset('css/font-awesome.min.css')); ?>" type="text/css" rel="stylesheet" /> <?php echo $__env->yieldContent('css'); ?>
@@ -72,7 +72,7 @@
 		<?php echo $__env->yieldContent('content'); ?>
 		<hr />
 		<footer class="footer">
-			<p>&copy; <?php echo e(@date("Y")); ?> <?php echo e(config('app.name', 'Ask-Programer')); ?> Website ask and question about programing</p>
+			<p>&copy; <?php echo e(@date("Y")); ?> Ask-Programer Website ask and question about programing</p>
 		</footer>
 	</div>
 	<script src="<?php echo e(URL::asset('js/popper.min.js')); ?>" type="text/javascript"></script>
@@ -85,7 +85,7 @@
 			$("#DataList").DataTable({
 				"aLengthMenu": [
 					[10, 25, 50, 100, -1],
-					[10, 25, 50, 100, "Tất cả"]
+					[10, 25, 50, 100, "All"]
 				],
 				"iDisplayLength": 25,
 				"oLanguage": {

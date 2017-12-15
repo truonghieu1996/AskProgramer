@@ -4,7 +4,7 @@
 	<div class="row justify-content-center">
 		<div class="col-12 col-md-auto">
 			<div class="card">
-				<div class="card-header">Khôi phục mật khẩu</div>
+				<div class="card-header">Rescover password</div>
 				<div class="card-body">
 					@if (session('status'))
 						<div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -15,14 +15,14 @@
 					<form role="form" method="post" action="{{ route('password.email') }}">
 						{{ csrf_field() }}
 						<div class="form-group">
-							<label for="email">Địa chỉ email đã đăng ký</label>
+							<label for="email">Email</label>
 							<input type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" id="email" name="email" value="{{ old('email') }}" required />
 							@if ($errors->has('email'))
 								<div class="invalid-feedback"><strong>{{ $errors->first('email') }}</strong></div>
 							@endif
 						</div>
 						
-						<button type="submit" class="btn btn-primary">Gởi email khôi phục</button>
+						<button type="submit" class="btn btn-primary">Recover</button>
 					</form>
 				</div>
 			</div>

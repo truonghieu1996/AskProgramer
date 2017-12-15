@@ -37,9 +37,9 @@ class ChangePasswordController extends Controller
 				'password' => bcrypt($request->new_password),
 				'updated_at' => Carbon::now()
 			]);
-			return redirect('/changepassword')->with('success', 'Đổi mật khẩu thành công!');
+			return redirect('/changepassword')->with('success', 'Change password successful!');
 		}
 		else
-			return redirect('/changepassword')->with('warning', 'Mật khẩu cũ không chính xác!');
+			return redirect('/changepassword')->with('warning', 'Old password incorrect!');
 	}
 }

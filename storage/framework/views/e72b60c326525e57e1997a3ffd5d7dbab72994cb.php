@@ -2,11 +2,18 @@
 	<div class="row justify-content-center">
 		<div class="col-12 col-md-auto">
 			<div class="card">
-				<div class="card-header">Login</div>
+				<div class="card-header">Create an account</div>
 				<div class="card-body">
-					<form role="form" method="post" action="<?php echo e(route('login')); ?>">
+					<form role="form" method="post" action="<?php echo e(route('register')); ?>">
 						<?php echo e(csrf_field()); ?>
 
+						<div class="form-group">
+							<label for="name">Full name</label>
+							<input type="text" class="form-control<?php echo e($errors->has('name') ? ' is-invalid' : ''); ?>" id="name" name="name" value="<?php echo e(old('name')); ?>" placeholder="" required />
+							<?php if($errors->has('name')): ?>
+								<div class="invalid-feedback"><strong><?php echo e($errors->first('name')); ?></strong></div>
+							<?php endif; ?>
+						</div>
 						<div class="form-group">
 							<label for="email">Email</label>
 							<input type="email" class="form-control<?php echo e($errors->has('email') ? ' is-invalid' : ''); ?>" id="email" name="email" value="<?php echo e(old('email')); ?>" placeholder="" required />
@@ -22,16 +29,14 @@
 							<?php endif; ?>
 						</div>
 						<div class="form-group">
-							<div class="form-check">
-								<label class="custom-control custom-checkbox form-check-label">
-									<input class="custom-control-input form-check-input" type="checkbox" name="remember" <?php echo e(old('remember') ? 'checked' : ''); ?> />
-									<span class="custom-control-indicator"></span>
-									<span class="custom-control-description">Remember</span>
-								</label>
-							</div>
+							<label for="password_confirmation">Confirm password</label>
+							<input type="password" class="form-control<?php echo e($errors->has('password_confirmation') ? ' is-invalid' : ''); ?>" id="password_confirmation" name="password_confirmation" placeholder="" required />
+							<?php if($errors->has('password_confirmation')): ?>
+								<div class="invalid-feedback"><strong><?php echo e($errors->first('password_confirmation')); ?></strong></div>
+							<?php endif; ?>
 						</div>
 						
-						<button type="submit" class="btn btn-primary">Login</button> or <a href="<?php echo e(route('password.request')); ?>">Forget password?</a>
+						<button type="submit" class="btn btn-primary">Register</button>
 					</form>
 				</div>
 			</div>

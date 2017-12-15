@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<meta name="author" content="Tong Thien Viet Anh" />
 	<meta name="csrf-token" content="{{ csrf_token() }}" />
-	<title>{{ config('app.name', 'Ask-Programer') }}</title>
+	<title>Ask-Programer</title>
 	<link href="{{ URL::asset('css/app.css') }}" type="text/css" rel="stylesheet" />
 	<link href="{{ URL::asset('css/dataTables.bootstrap4.min.css') }}" type="text/css" rel="stylesheet" />
 	<link href="{{ URL::asset('css/font-awesome.min.css') }}" type="text/css" rel="stylesheet" /> @yield('css')
@@ -72,7 +72,7 @@
 		@yield('content')
 		<hr />
 		<footer class="footer">
-			<p>&copy; {{ @date("Y") }} {{ config('app.name', 'Ask-Programer') }} Website ask and question about programing</p>
+			<p>&copy; {{ @date("Y") }} Ask-Programer Website ask and question about programing</p>
 		</footer>
 	</div>
 	<script src="{{ URL::asset('js/popper.min.js') }}" type="text/javascript"></script>
@@ -85,7 +85,7 @@
 			$("#DataList").DataTable({
 				"aLengthMenu": [
 					[10, 25, 50, 100, -1],
-					[10, 25, 50, 100, "Tất cả"]
+					[10, 25, 50, 100, "All"]
 				],
 				"iDisplayLength": 25,
 				"oLanguage": {
