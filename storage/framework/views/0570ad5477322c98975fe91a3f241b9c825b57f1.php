@@ -22,12 +22,12 @@
 								<tr>
 									<td><?php echo e($count++); ?></td>
 									<td class="text-center"><?php echo e($value->name_category); ?></td>
-									<td><?php echo e($value->title); ?><br /><span class='small text-muted'>Đăng bởi <?php echo e($value->name); ?>, có <?php echo e($value->amount_view); ?> lượt xem.</span></td>
+									<td><?php echo e($value->title); ?><br /><span class='small text-muted'>Post by <?php echo e($value->name); ?>, have <?php echo e($value->amount_view); ?> amount view and score is <?php echo e($value->score); ?>.</span></td>
 									<td class="text-center">
-										<?php if($value->approved == 1): ?>
-											<a href="<?php echo e(url('/news/' . $value->id . '/approved/0')); ?>"><span class="badge badge-success">Đã duyệt</span></a>
+										<?php if($value->is_approved == 1): ?>
+											<a href="<?php echo e(url('/news/' . $value->id . '/approved/0')); ?>"><span class="badge badge-success">Approved</span></a>
 										<?php else: ?>
-											<a href="<?php echo e(url('/news/' . $value->id . '/approved/1')); ?>"><span class="badge badge-warning">Chưa duyệt</span></a>
+											<a href="<?php echo e(url('/news/' . $value->id . '/approved/1')); ?>"><span class="badge badge-warning">Not approved</span></a>
 										<?php endif; ?>
 									</td>
 									<td class="text-center">

@@ -24,12 +24,12 @@
 								<tr>
 									<td>{{ $count++ }}</td>
 									<td class="text-center">{{ $value->name_category }}</td>
-									<td>{{ $value->title }}<br /><span class='small text-muted'>Đăng bởi {{ $value->name }}, có {{ $value->amount_view }} lượt xem.</span></td>
+									<td>{{ $value->title }}<br /><span class='small text-muted'>Post by {{ $value->name }}, have {{ $value->amount_view }} amount view and score is {{ $value->score}}.</span></td>
 									<td class="text-center">
-										@if($value->approved == 1)
-											<a href="{{ url('/news/' . $value->id . '/approved/0') }}"><span class="badge badge-success">Đã duyệt</span></a>
+										@if($value->is_approved == 1)
+											<a href="{{ url('/news/' . $value->id . '/approved/0') }}"><span class="badge badge-success">Approved</span></a>
 										@else
-											<a href="{{ url('/news/' . $value->id . '/approved/1') }}"><span class="badge badge-warning">Chưa duyệt</span></a>
+											<a href="{{ url('/news/' . $value->id . '/approved/1') }}"><span class="badge badge-warning">Not approved</span></a>
 										@endif
 									</td>
 									<td class="text-center">
