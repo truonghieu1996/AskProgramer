@@ -101,10 +101,10 @@ class AsksController extends Controller
 		return redirect('asks/myasks');
     }
 
-    public function getDetail($id, $amount, $user_id, $score){
+    public function getDetail($id, $amount, $user_id, $score, $isApproved){
         $amount++;
 		$ask = DB::table('questions')->where('id','=', $id)->first();
-		if(Auth::user()->id != $user_id){
+		if(Auth::user()->id != $user_id && $isApproved == 1){
 			DB::table('questions')->where('id', $id)->update([
 				'amount_view' => $amount
 			]);

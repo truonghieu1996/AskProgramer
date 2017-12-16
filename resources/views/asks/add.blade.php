@@ -3,7 +3,7 @@
 <div class="row">
     <div class="col">
         <div class="card">
-            <div class="card-header">Add ask question</div>
+            <div class="card-header" style="color:red;">Add ask question</div>
             <div class="card-body">
                 <form action="{{ url('/asks/myasks/add') }}" method="post">
                     {{ csrf_field() }}

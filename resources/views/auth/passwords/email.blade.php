@@ -4,7 +4,7 @@
 	<div class="row justify-content-center">
 		<div class="col-12 col-md-auto">
 			<div class="card">
-				<div class="card-header">Rescover password</div>
+				<div class="card-header" style="color:red;">Rescover password</div>
 				<div class="card-body">
 					@if (session('status'))
 						<div class="alert alert-success alert-dismissible fade show" role="alert">

@@ -5,7 +5,7 @@
 	<div class="row">
 		<div class="col">
 			<div class="card">
-				<div class="card-header">Asks</div>
+				<div class="card-header" style="color:red;">Asks</div>
 				<div class="card-body">
 					<table id="DataList" class="table table-bordered table-hover table-sm table-responsive">
 						<thead>
@@ -33,7 +33,7 @@
 										@endif
 									</td>
 									<td class="text-center">
-										<a href="{{ url('/asks/detail/' . $value->id .'/'.$value->amount_view.'/'.$value->user_id.'/'.$value->user_id) }}" class="btn btn-warning btn-sm" style="width:40px;">View</a>
+										<a href="{{ url('/asks/detail/' . $value->id .'/'.$value->amount_view.'/'.$value->user_id.'/'.$value->score.'/'. $value->is_approved) }}" class="btn btn-warning btn-sm" style="width:40px;">View</a>
 									</td>
 									<td class="text-center">
 										<a data-toggle="modal" data-target="#myModalDelete" onclick="getDelete({{ $value->id }}); return false;" class="btn btn-danger btn-sm"

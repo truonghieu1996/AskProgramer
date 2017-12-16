@@ -25,4 +25,4 @@ Route::post('/asks/myasks/update', 'AsksController@postUpdate');
 
 Route::get('/asks/myasks/delete', 'AsksController@getDelete');
 Route::get('/asks/{id}/approved/{status}', 'AsksController@getApprovedPost');
-Route::get('/asks/detail/{id}/{amount}/{score}/{user_id}', 'AsksController@getDetail');
+Route::get('/asks/detail/{id}/{amount}/{score}/{user_id}/{is_approved}', 'AsksController@getDetail');

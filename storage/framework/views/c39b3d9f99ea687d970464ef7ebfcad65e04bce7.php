@@ -3,7 +3,7 @@
 	<div class="row">
 		<div class="col">
 			<div class="card">
-				<div class="card-header">My asks</div>
+				<div class="card-header" style="color:red;">My asks</div>
 				<div class="card-body">
                 <form action="<?php echo e(url('/asks/myasks/add')); ?>" method="GET">
                     <p>
@@ -48,7 +48,7 @@
 										<?php endif; ?>
 									</td>
 									<td class="text-center">
-										<a href="<?php echo e(url('/asks/detail/' . $value->id .'/'.$value->amount_view.'/'.$value->user_id.'/'.$value->score)); ?>" class="btn btn-warning btn-sm"
+										<a href="<?php echo e(url('/asks/detail/' . $value->id .'/'.$value->amount_view.'/'.$value->user_id.'/'.$value->score.'/'. $value->is_approved)); ?>" class="btn btn-warning btn-sm"
 											style="width:40px;">View</a>
 									</td>
 									<td class="text-center">

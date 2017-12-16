@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col">
             <div class="card">
-                <div class="card-header">Users</div>
+                <div class="card-header" style="color:red;">Users</div>
                 <div class="card-body">
                     <table id="DataList" class="table table-bordered table-hover table-sm table-responsive">
                         <thead>
