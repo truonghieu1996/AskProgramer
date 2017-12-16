@@ -10,12 +10,12 @@
 					<table id="DataList" class="table table-bordered table-hover table-sm table-responsive">
 						<thead>
 							<tr>
-								<th width="5%">#</th>
-								<th width="15%">Category</th>
-								<th width="50%">Title</th>
-								<th width="15%">Is approved</th>
-								<th width="10%">Detail</th>
-								<th width="5%">Delete</th>
+								<th class="text-center" width="5%">#</th>
+								<th class="text-center" width="15%">Category</th>
+								<th class="text-center" width="50%">Title</th>
+								<th class="text-center" width="15%">Is approved</th>
+								<th class="text-center" width="10%">Detail</th>
+								<th class="text-center" width="5%">Delete</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -27,13 +27,13 @@
 									<td>{{ $value->title }}<br /><span class='small text-muted'>Post by {{ $value->name }}, have {{ $value->amount_view }} amount view and score is {{ $value->score}}.</span></td>
 									<td class="text-center">
 										@if($value->is_approved == 1)
-											<a href="{{ url('/news/' . $value->id . '/approved/0') }}"><span class="badge badge-success">Approved</span></a>
+											<a href="{{ url('/asks/' . $value->id . '/approved/0') }}"><span class="badge badge-success">Approved</span></a>
 										@else
-											<a href="{{ url('/news/' . $value->id . '/approved/1') }}"><span class="badge badge-warning">Not approved</span></a>
+											<a href="{{ url('/asks/' . $value->id . '/approved/1') }}"><span class="badge badge-warning">Not approved</span></a>
 										@endif
 									</td>
 									<td class="text-center">
-										<a href="{{ url('/news/detail/' . $value->id .'/'.$value->amount_view.'/'.$value->user_id) }}" class="btn btn-warning btn-sm" style="width:40px;">Xem</a>
+										<a href="{{ url('/asks/detail/' . $value->id .'/'.$value->amount_view.'/'.$value->user_id) }}" class="btn btn-warning btn-sm" style="width:40px;">Xem</a>
 									</td>
 									<td class="text-center">
 										<a data-toggle="modal" data-target="#myModalDelete" onclick="getDelete({{ $value->id }}); return false;" class="btn btn-danger btn-sm"

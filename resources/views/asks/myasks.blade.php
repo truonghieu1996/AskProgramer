@@ -14,15 +14,15 @@
 					<table id="DataList" class="table table-bordered table-hover table-sm table-responsive">
 						<thead>
 							<tr>
-								<th width="5%">#</th>
-								<th width="10%">Category</th>
-								<th width="20%">Title</th>
-								<th width="12%">Date created</th>
-								<th width="12%">Date updated</th>
-								<th width="10%">Is approved</th>
-								<th width="10%">Detail</th>
-								<th width="8%">Edit</th>
-								<th width="8%">Delete</th>
+								<th class="text-center" width="5%">#</th>
+								<th class="text-center" width="10%">Category</th>
+								<th class="text-center" width="20%">Title</th>
+								<th class="text-center" width="12%">Date created</th>
+								<th class="text-center" width="12%">Date updated</th>
+								<th class="text-center" width="10%">Is approved</th>
+								<th class="text-center" width="10%">Detail</th>
+								<th class="text-center" width="8%">Edit</th>
+								<th class="text-center" width="8%">Delete</th>
 							</tr>
 						</thead>
 						<tbody>

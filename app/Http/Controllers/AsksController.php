@@ -19,7 +19,7 @@ class AsksController extends Controller
         ->join('categories', 'categories.id', '=', 'questions.category_id')
         ->join('users', 'users.id', '=', 'questions.user_id')
         ->select('questions.*', 'categories.name_category', 'users.name')
-        ->orderBy('questions.created_at', 'asc')->get();
+        ->orderBy('questions.created_at', 'DESC')->get();
         return view('asks.index',['asks'=>$asks]);
     }
 
@@ -28,7 +28,7 @@ class AsksController extends Controller
         $myquestions = DB::table('questions')
         ->join('categories', 'categories.id', '=', 'questions.category_id')
         ->select('questions.*', 'categories.name_category')
-        ->orderBy('questions.created_at', 'asc')
+        ->orderBy('questions.created_at', 'DESC')
         ->where('user_id', '=', Auth::user()->id)->get();
         return view('asks.myasks',['myquestions' => $myquestions, 'categories' => $categories]);
     }
@@ -63,6 +63,14 @@ class AsksController extends Controller
 		]);
 		
 		return redirect('asks/myasks');
+    }
+    
+    public function getApprovedPost($id, $status)
+	{
+		DB::table('questions')->where('id', $id)->update([
+			'is_approved' => $status
+		]);
+		return redirect('asks');
 	}
 
 }
