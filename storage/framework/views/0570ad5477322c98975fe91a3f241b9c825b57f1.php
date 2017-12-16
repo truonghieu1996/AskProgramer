@@ -31,11 +31,11 @@
 										<?php endif; ?>
 									</td>
 									<td class="text-center">
-										<a href="<?php echo e(url('/asks/detail/' . $value->id .'/'.$value->amount_view.'/'.$value->user_id)); ?>" class="btn btn-warning btn-sm" style="width:40px;">Xem</a>
+										<a href="<?php echo e(url('/asks/detail/' . $value->id .'/'.$value->amount_view.'/'.$value->user_id.'/'.$value->user_id)); ?>" class="btn btn-warning btn-sm" style="width:40px;">View</a>
 									</td>
 									<td class="text-center">
 										<a data-toggle="modal" data-target="#myModalDelete" onclick="getDelete(<?php echo e($value->id); ?>); return false;" class="btn btn-danger btn-sm"
-											style="width:40px;">Xóa</a>
+											style="width:40px;">Delete</a>
 									</td>
 								</tr>
 							<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

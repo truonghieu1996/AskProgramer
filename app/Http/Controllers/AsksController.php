@@ -101,4 +101,15 @@ class AsksController extends Controller
 		return redirect('asks/myasks');
     }
 
+    public function getDetail($id, $amount, $user_id, $score){
+        $amount++;
+		$ask = DB::table('questions')->where('id','=', $id)->first();
+		if(Auth::user()->id != $user_id){
+			DB::table('questions')->where('id', $id)->update([
+				'amount_view' => $amount
+			]);
+		}
+		return view('asks/detail',['ask'=>$ask]);
+    }
+
 }

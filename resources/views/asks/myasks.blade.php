@@ -47,7 +47,7 @@
 										@endif
 									</td>
 									<td class="text-center">
-										<a href="{{ url('/asks/detail/' . $value->id .'/'.$value->amount_view.'/'.$value->user_id) }}" class="btn btn-warning btn-sm"
+										<a href="{{ url('/asks/detail/' . $value->id .'/'.$value->amount_view.'/'.$value->user_id.'/'.$value->score) }}" class="btn btn-warning btn-sm"
 											style="width:40px;">View</a>
 									</td>
 									<td class="text-center">
