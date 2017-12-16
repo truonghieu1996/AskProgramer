@@ -28,7 +28,7 @@
 			<div class="collapse navbar-collapse" id="navbarNavDropdown">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="<?php echo e(url('/home')); ?>">Home</a>
+						<a class="nav-link" href="<?php echo e(url('/asks/myasks/add')); ?>">Ask question</a>
 					</li>
 				</ul>
 				<ul class="navbar-nav ml-auto">

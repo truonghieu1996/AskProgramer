@@ -84,4 +84,21 @@ class AsksController extends Controller
 		return view('asks.update',['ask' => $ask, 'categories' => $categories]);
     }
 
+    public function postUpdate(Request $request){
+        $this->validate($request, [
+            'title_edit' => 'required|max:225',
+			'category_id_edit' => 'required',
+			'content_edit' => 'required',
+        ]);
+
+		DB::table('questions')->where('id', $request->ID_edit)->update([
+			'category_id' => $request->category_id_edit,
+			'title' => $request->title_edit,
+			'content' => $request->content_edit,
+			'updated_at' => Carbon::now()
+		]);
+		
+		return redirect('asks/myasks');
+    }
+
 }
