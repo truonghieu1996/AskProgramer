@@ -52,7 +52,7 @@
 											style="width:40px;">View</a>
 									</td>
 									<td class="text-center">
-										<a href="<?php echo e(url('/update/' . $value->id)); ?>" class="btn btn-warning btn-sm"
+										<a href="<?php echo e(url('/asks/myasks/update/' . $value->id)); ?>" class="btn btn-warning btn-sm"
 											style="width:40px;">Edit</a>
 									</td>
 									<td class="text-center">

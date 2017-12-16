@@ -78,4 +78,10 @@ class AsksController extends Controller
 		return redirect('asks/myasks');
     }
 
+    public function getUpdate($id){
+        $categories = DB::table('categories')->get();
+		$ask = DB::table('questions')->where('id', '=', $id)->first();
+		return view('asks.update',['ask' => $ask, 'categories' => $categories]);
+    }
+
 }

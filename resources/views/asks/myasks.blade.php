@@ -51,7 +51,7 @@
 											style="width:40px;">View</a>
 									</td>
 									<td class="text-center">
-										<a href="{{ url('/update/' . $value->id) }}" class="btn btn-warning btn-sm"
+										<a href="{{ url('/asks/myasks/update/' . $value->id) }}" class="btn btn-warning btn-sm"
 											style="width:40px;">Edit</a>
 									</td>
 									<td class="text-center">

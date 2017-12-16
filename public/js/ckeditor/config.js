@@ -10,8 +10,8 @@ CKEDITOR.editorConfig = function( config ) {
 	config.height = 500;
 	config.removePlugins = 'elementspath';
 	config.resize_enabled = false;
-	
 	config.toolbarGroups = [
+		{name: 'pbckcode'},
 		{ name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
 		{ name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
 		{ name: 'editing', groups: [ 'find', 'selection', 'editing' ] },
@@ -25,6 +25,15 @@ CKEDITOR.editorConfig = function( config ) {
 		{ name: 'colors', groups: [ 'colors' ] },
 		{ name: 'others', groups: [ 'others' ] }
 	];
+	config.extraPlugins = 'pbckcode';
+	config.allowedContent = 'pre[*]{*}(*)';
+	config.pbckcode = {
+	    cls: '',
+	    highlighter: 'PRETTIFY',
+	    modes: [['HTML', 'html'], ['CSS', 'css'], ['PHP', 'php'], ['JS', 'javascript'], ['C/C++', 'c_cpp'],['C#', 'csharp'],['SQL', 'sql'],['Java', 'java']],
+	    theme: 'textmate',
+	    tab_size: '4'
+	};
 	config.removeButtons = 'Save,Print,Paste,PasteFromWord,Subscript,Superscript,Language,Anchor,Flash,SpecialChar,PageBreak';
 	
 	config.filebrowserBrowseUrl			= 'http://127.0.0.1:8080/fit/public/js/ckfinder/ckfinder.html?type=Files';

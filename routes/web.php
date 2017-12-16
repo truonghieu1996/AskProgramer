@@ -20,7 +20,7 @@ Route::get('/asks/myasks', 'AsksController@getMyAsks');
 Route::get('/asks/myasks/add', 'AsksController@getAdd');
 Route::post('/asks/myasks/add', 'AsksController@postAdd');
 
-Route::get('/asks/myasks/update', 'AsksController@getUpdate');
+Route::get('/asks/myasks/update/{id}', 'AsksController@getUpdate');
 Route::post('/asks/myasks/update', 'AsksController@postUpdate');
 
 Route::get('/asks/myasks/delete', 'AsksController@getDelete');
