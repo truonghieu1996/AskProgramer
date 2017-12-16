@@ -67,7 +67,7 @@
 		</div>
 	</div>
 
-	<form action="{{ url('/asks/delete') }}" method="get">
+	<form action="{{ url('/asks/myasks/delete') }}" method="get">
 		{{ csrf_field() }}
 		<input type="hidden" id="ID_delete" name="ID_delete" value="" />
 		<div class="modal fade" id="myModalDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabelDelete" aria-hidden="true">

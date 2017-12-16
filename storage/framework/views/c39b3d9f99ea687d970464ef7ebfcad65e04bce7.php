@@ -68,7 +68,7 @@
 		</div>
 	</div>
 
-	<form action="<?php echo e(url('/asks/delete')); ?>" method="get">
+	<form action="<?php echo e(url('/asks/myasks/delete')); ?>" method="get">
 		<?php echo e(csrf_field()); ?>
 
 		<input type="hidden" id="ID_delete" name="ID_delete" value="" />

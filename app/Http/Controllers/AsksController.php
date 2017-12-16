@@ -71,6 +71,11 @@ class AsksController extends Controller
 			'is_approved' => $status
 		]);
 		return redirect('asks');
-	}
+    }
+    
+    public function getDelete(Request $request){
+        DB::table('questions')->where('id', '=', $request->ID_delete)->delete();
+		return redirect('asks/myasks');
+    }
 
 }
