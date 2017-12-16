@@ -45,12 +45,12 @@
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#tongquan" id="navbarQuanLy" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Management</a>
 						<div class="dropdown-menu" aria-labelledby="navbarQuanLy">
+							<a class="dropdown-item" href="<?php echo e(url('/asks/myasks')); ?>">My ask question</a>
 							<?php if(Auth::user()->role == 1): ?>
+							<a class="dropdown-item" href="<?php echo e(url('/asks')); ?>">Asks question</a>
 							<a class="dropdown-item" href="<?php echo e(url('/categories')); ?>">Categories</a>
-							<a class="dropdown-item" href="<?php echo e(url('/news')); ?>">Post</a>
 							<a class="dropdown-item" href="<?php echo e(url('/users')); ?>">Users</a>
 							<?php else: ?> <?php endif; ?>
-							<a class="dropdown-item" href="news/mynews">My post</a>
 							<a class="dropdown-item" href="<?php echo e(url('/profile')); ?>">My profile</a>
 						</div>
 					</li>

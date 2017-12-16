@@ -13,4 +13,15 @@ Route::get('/users/delete', 'UsersController@getDelete');
 Route::post('/users/update', 'UsersController@postUpdate');
 Route::get('/profile', 'ProfileController@getProfile');
 Route::post('/profile/update', 'ProfileController@postUpdate');
+//Asks
+Route::get('/asks', 'AsksController@getAsks');
+Route::get('/asks/myasks', 'AsksController@getMyAsks');
+
+Route::get('/asks/myasks/add', 'AsksController@getAdd');
+Route::post('/asks/myasks/add', 'AsksController@postAdd');
+
+Route::get('/asks/myasks/update', 'AsksController@getUpdate');
+Route::post('/asks/myasks/update', 'AsksController@postUpdate');
+
+Route::get('/asks/myasks/delete', 'AsksController@getDelete');
 
