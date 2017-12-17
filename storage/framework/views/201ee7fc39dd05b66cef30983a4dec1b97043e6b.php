@@ -31,7 +31,7 @@
 							</div>
 						</div>
 						
-						<button type="submit" class="btn btn-primary">Login</button> or <a href="<?php echo e(route('password.request')); ?>">Forget password?</a>
+						<button type="submit" class="btn btn-dark">Login</button> or <a href="<?php echo e(route('password.request')); ?>">Forget password?</a>
 					</form>
 				</div>
 			</div>

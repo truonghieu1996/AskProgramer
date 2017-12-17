@@ -5,7 +5,7 @@
 			<div class="card">
 				<div class="card-header">Categories</div>
 				<div class="card-body">
-					<p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"></i> Add</button></p>
+					<p><button type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"></i> Add</button></p>
 					<table id="DataList" class="table table-bordered table-hover table-sm table-responsive">
 						<thead>
 							<tr>
@@ -52,7 +52,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-primary">Add</button>
+						<button type="submit" class="btn btn-darky">Add</button>
 					</div>
 				</div>
 			</div>chude

@@ -67,7 +67,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-primary">Add</button>
+						<button type="submit" class="btn btn-dark">Add</button>
 					</div>
 				</div>
 			</div>chude

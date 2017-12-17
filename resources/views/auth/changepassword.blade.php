@@ -42,7 +42,7 @@
 							@endif
 						</div>
 						
-						<button type="submit" class="btn btn-primary">Change</button>
+						<button type="submit" class="btn btn-dark">Change</button>
 					</form>
 				</div>
 			</div>

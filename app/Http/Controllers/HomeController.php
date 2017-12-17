@@ -15,8 +15,9 @@ class HomeController extends Controller
     public function index(){
         $asks = DB::table('questions')->orderBy('created_at', 'DESC')
         ->join('users', 'users.id', '=', 'questions.user_id')
+        ->join('categories', 'categories.id', '=', 'questions.category_id')
         ->where('is_approved','=',1)
-        ->select('questions.*', 'users.name')
+        ->select('questions.*', 'users.name', 'categories.name_category')
         
         ->get();
         return view('home',['asks'=>$asks]);

@@ -37,7 +37,7 @@
 							@endif
 						</div>
 						
-						<button type="submit" class="btn btn-primary">Reset</button>
+						<button type="submit" class="btn btn-dark">Reset</button>
 					</form>
 				</div>
 			</div>

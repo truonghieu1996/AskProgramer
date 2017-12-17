@@ -91,7 +91,7 @@ class AsksController extends Controller
 			'content_edit' => 'required',
         ]);
 
-		DB::table('questions')->where('id', $request->ID_edit)->update([
+		DB::table('questions')->where('id', '=' , $request->ID_edit)->update([
 			'category_id' => $request->category_id_edit,
 			'title' => $request->title_edit,
 			'content' => $request->content_edit,
@@ -112,4 +112,9 @@ class AsksController extends Controller
 		return view('asks/detail',['ask'=>$ask]);
     }
 
+    public function getUpdateScore(Request $request){
+        DB::table('questions')->where('id','=', $request->id_question)->update([
+			'score' => $request->score
+		]);
+    }
 }

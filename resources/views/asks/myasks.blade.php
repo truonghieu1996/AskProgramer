@@ -7,7 +7,7 @@
 				<div class="card-body">
                 <form action="{{ url('/asks/myasks/add') }}" method="GET">
                     <p>
-						<button type="submit" class="btn btn-primary">
+						<button type="submit" class="btn btn-dark">
 							<i class="fa fa-plus" aria-hidden="true"></i> Ask question</button>
 					</p>
                 </form>

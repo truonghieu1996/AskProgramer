@@ -22,7 +22,7 @@
 							@endif
 						</div>
 						
-						<button type="submit" class="btn btn-primary">Recover</button>
+						<button type="submit" class="btn btn-dark">Recover</button>
 					</form>
 				</div>
 			</div>
